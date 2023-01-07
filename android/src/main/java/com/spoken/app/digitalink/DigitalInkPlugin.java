@@ -192,6 +192,9 @@ public class DigitalInkPlugin extends Plugin {
         Integer wSize = writingArea.getInteger("w");
         Integer hSize = writingArea.getInteger("h");
 
+        wSize = wSize == null ? new Integer(0) : wSize;
+        hSize = hSize == null ? new Integer(0) : hSize;
+
         recognizerContextBuilder.setWritingArea(new WritingArea(wSize, hSize));
 
         RecognitionContext recognizerContext = recognizerContextBuilder.build();

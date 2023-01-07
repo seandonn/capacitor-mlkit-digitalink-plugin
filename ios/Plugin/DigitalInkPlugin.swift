@@ -209,8 +209,8 @@ public class DigitalInkPlugin: CAPPlugin {
         
         let writingArea: JSObject? = call.getObject("writingArea")
         
-        let writingWidth = (writingArea?["w"] ?? 0) as! Float
-        let writingHeight = (writingArea?["h"] ?? 0) as! Float
+        let writingWidth = (writingArea?["w"] ?? 0) as! Double
+        let writingHeight = (writingArea?["h"] ?? 0) as! Double
         
         let recognizerContext: DigitalInkRecognitionContext = DigitalInkRecognitionContext.init(preContext: "", writingArea: WritingArea.init(width: writingWidth, height: writingHeight))
         
